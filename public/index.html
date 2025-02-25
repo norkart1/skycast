@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>WeatherSync 🌤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Weather App</h1>
-    <input type="text" id="city" placeholder="Enter city name">
-    <button onclick="getWeather()">Get Weather</button>
+    <div class="container">
+        <h1>WeatherSync 🌦️</h1>
 
-    <div id="weather-info"></div>
+        <div class="search-box">
+            <input type="text" id="city" placeholder="Enter city name..." />
+            <button onclick="getWeather()">Get Weather</button>
+        </div>
+
+        <div id="weather-card" class="hidden">
+            <h2 id="city-name"></h2>
+            <p id="description"></p>
+            <div class="weather-details">
+                <p><strong>🌡️ Temperature:</strong> <span id="temperature"></span>°C</p>
+                <p><strong>💨 Wind Speed:</strong> <span id="wind-speed"></span> m/s</p>
+                <p><strong>💧 Humidity:</strong> <span id="humidity"></span>%</p>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
